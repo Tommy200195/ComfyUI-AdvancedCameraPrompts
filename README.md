@@ -12,6 +12,18 @@ This node takes camera position and orientation data from your 3D scene and auto
 
 All of this is output as both human-readable prompts and structured JSON data.
 
+## Visual Examples
+
+Here are some examples showing the node in action:
+
+![Example 1](example/example01.png)
+
+![Example 2](example/example02.png)
+
+![Example 3](example/example03.png)
+
+![Example 4](example/example04.png)
+
 ## Features
 
 - **Smart Camera Analysis**: Automatically extracts camera position, target, and rotation from 3D nodes
@@ -42,6 +54,8 @@ All of this is output as both human-readable prompts and structured JSON data.
 1. Add a **Load 3D** or **Load 3D - Animation** node to your workflow
 2. Add the **Advanced Camera Control Prompt Generator** node
 3. Connect the camera output from your 3D node to the "Camera Info" input
+
+See the example images above for visual reference on how to set up the node in your workflow.
 
 ### Input Parameters
 
